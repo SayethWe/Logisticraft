@@ -1,0 +1,16 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "result": {
+    "item": "logisticraft:carbonpaste",
+    "count": 2
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "minecraft:coal",
+      "data": 1
+    }
+  ]
+}

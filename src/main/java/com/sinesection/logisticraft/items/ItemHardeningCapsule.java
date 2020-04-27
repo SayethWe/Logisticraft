@@ -19,5 +19,7 @@ public class ItemHardeningCapsule extends Item {
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this,0,new ModelResourceLocation(getRegistryName(), "raw"));
         ModelLoader.setCustomModelResourceLocation(this,1,new ModelResourceLocation(getRegistryName()+"_light","light"));
+        ModelLoader.setCustomModelResourceLocation(this, 2, new ModelResourceLocation(getRegistryName()+"_medium", "medium"));
+        ModelLoader.setCustomModelResourceLocation(this, 3, new ModelResourceLocation(getRegistryName()+"_dark","dark"));
     }
 }

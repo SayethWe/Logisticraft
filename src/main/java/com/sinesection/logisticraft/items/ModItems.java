@@ -10,10 +10,13 @@ public class ModItems {
     public static ItemCarbonPaste carbonPaste;
     @GameRegistry.ObjectHolder("logisticraft:hardening_capsule")
     public static ItemHardeningCapsule hardeningCapsule;
+    @GameRegistry.ObjectHolder("logisticraft:steel_ingot")
+    public static ItemSteelIngot steelIngot;
 
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         carbonPaste.initModel();
         hardeningCapsule.initModel();
+        steelIngot.initModel();
     }
 }

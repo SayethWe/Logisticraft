@@ -18,8 +18,8 @@ public class ItemHardeningCapsule extends Item {
     @SideOnly(Side.CLIENT)
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this,0,new ModelResourceLocation(getRegistryName(), "raw"));
-        ModelLoader.setCustomModelResourceLocation(this,1,new ModelResourceLocation(getRegistryName()+"_light","light")); //mostly unused
-        ModelLoader.setCustomModelResourceLocation(this, 2, new ModelResourceLocation(getRegistryName()+"_medium", "medium"));
-        ModelLoader.setCustomModelResourceLocation(this, 3, new ModelResourceLocation(getRegistryName()+"_dark","dark"));
+        //ModelLoader.setCustomModelResourceLocation(this,1,new ModelResourceLocation(getRegistryName()+"_light","light")); //unused
+        ModelLoader.setCustomModelResourceLocation(this, 1, new ModelResourceLocation(getRegistryName()+"_medium", "medium"));
+        ModelLoader.setCustomModelResourceLocation(this, 2, new ModelResourceLocation(getRegistryName()+"_dark","dark"));
     }
 }

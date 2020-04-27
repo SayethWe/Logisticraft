@@ -2,6 +2,7 @@ package com.sinesection.logisticraft.proxy;
 
 import com.sinesection.logisticraft.items.ItemCarbonPaste;
 import com.sinesection.logisticraft.items.ItemHardeningCapsule;
+import com.sinesection.logisticraft.items.ItemSteelIngot;
 import com.sinesection.logisticraft.items.ModItems;
 import com.sinesection.logisticraft.recipes.ModRecipes;
 import net.minecraft.block.Block;
@@ -35,7 +36,7 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemCarbonPaste());
-
         event.getRegistry().register(new ItemHardeningCapsule());
+        event.getRegistry().register(new ItemSteelIngot());
     }
 }

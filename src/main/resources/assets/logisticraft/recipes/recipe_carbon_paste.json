@@ -1,7 +1,7 @@
 {
   "type" : "minecraft:crafting_shapeless",
   "result": {
-    "item": "logisticraft:carbonpaste",
+    "item": "logisticraft:carbon_paste",
     "count": 2
   },
   "ingredients": [

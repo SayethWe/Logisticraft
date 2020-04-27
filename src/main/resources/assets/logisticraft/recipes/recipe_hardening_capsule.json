@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "pip",
+    " c "
+  ],
+  "key": {
+    "c": {
+      "item":"minecraft:clay_ball"
+    },
+    "p": {
+      "item": "logisticraft:carbon_paste"
+    },
+    "i": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    }
+  },
+  "result": {
+    "item": "logisticraft:hardening_capsule"
+  }
+}

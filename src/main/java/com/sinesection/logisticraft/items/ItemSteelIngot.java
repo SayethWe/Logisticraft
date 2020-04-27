@@ -7,7 +7,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemSteelIngot extends Item
+public class ItemSteelIngot extends ModItem
 {
     private enum EnumSteelType{
         CASE(0,"case"),
@@ -30,8 +30,7 @@ public class ItemSteelIngot extends Item
         }
     }
     public ItemSteelIngot() {
-        setRegistryName("steel_ingot");
-        setUnlocalizedName(Logisticraft.MODID+".steel_ingot");
+        super("steel_ingot");
         setHasSubtypes(true);
     }
 

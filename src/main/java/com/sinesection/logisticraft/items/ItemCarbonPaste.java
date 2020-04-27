@@ -7,11 +7,10 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemCarbonPaste extends Item {
+public class ItemCarbonPaste extends ModItem {
 
     public ItemCarbonPaste() {
-        setRegistryName("carbon_paste");
-        setUnlocalizedName(Logisticraft.MODID+".carbon_paste");
+        super("carbon_paste");
     }
 
     @SideOnly(Side.CLIENT)

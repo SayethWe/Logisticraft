@@ -8,10 +8,9 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemHardeningCapsule extends Item {
+public class ItemHardeningCapsule extends ModItem {
     public ItemHardeningCapsule() {
-        setRegistryName("hardening_capsule");
-        setUnlocalizedName(Logisticraft.MODID+".hardening_capsule");
+        super("hardening_capsule");
         setHasSubtypes(true);
     }
 

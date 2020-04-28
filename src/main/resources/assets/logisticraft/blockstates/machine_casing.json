@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "normal": {
+      "model": "logisticraft:wip",
+      "uvlock": true
+    }
+  }
+}

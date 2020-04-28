@@ -13,9 +13,4 @@ public class ItemCarbonPaste extends Item {
         setRegistryName("carbon_paste");
         setUnlocalizedName(Logisticraft.MODID+".carbon_paste");
     }
-
-    @SideOnly(Side.CLIENT)
-    public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(this,0,new ModelResourceLocation(getRegistryName(), "inventory"));
-    }
 }

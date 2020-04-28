@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0":"logisticraft:items/hardening_capsule"
+    "layer0":"logisticraft:item/hardening_capsule"
   }
 }

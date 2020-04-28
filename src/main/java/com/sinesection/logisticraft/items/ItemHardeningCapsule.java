@@ -14,10 +14,4 @@ public class ItemHardeningCapsule extends Item {
         setUnlocalizedName(Logisticraft.MODID+".hardening_capsule");
         setHasSubtypes(true);
     }
-
-    @SideOnly(Side.CLIENT)
-    public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(this,0,new ModelResourceLocation(getRegistryName(), "raw"));
-        ModelLoader.setCustomModelResourceLocation(this,1,new ModelResourceLocation(getRegistryName()+"_light","light"));
-    }
 }

@@ -4,6 +4,7 @@ import com.sinesection.logisticraft.blocks.BlockMachine;
 import com.sinesection.logisticraft.blocks.ModBlocks;
 import com.sinesection.logisticraft.items.ItemCarbonPaste;
 import com.sinesection.logisticraft.items.ItemHardeningCapsule;
+import com.sinesection.logisticraft.items.ItemSteelIngot;
 import com.sinesection.logisticraft.items.ModItems;
 import com.sinesection.logisticraft.recipes.ModRecipes;
 import net.minecraft.block.Block;
@@ -40,8 +41,7 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new ItemCarbonPaste());
-        event.getRegistry().register(new ItemHardeningCapsule());
+        ModItems.registerAll(event);
 
         event.getRegistry().register(new ItemBlock(ModBlocks.machineCasing).setRegistryName(ModBlocks.machineCasing.getRegistryName()));
     }

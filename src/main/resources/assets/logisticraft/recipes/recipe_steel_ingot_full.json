@@ -1,0 +1,14 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "result": {
+    "item": "logisticraft:steel_ingot",
+    "count": 1,
+    "data": 1
+  },
+  "ingredients": [
+    {
+      "item": "logisticraft:hardening_capsule",
+      "data": 2
+    }
+  ]
+}

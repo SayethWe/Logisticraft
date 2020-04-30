@@ -11,4 +11,9 @@ public class ModBlocks {
 
     @GameRegistry.ObjectHolder("logisticraft:machine_casing")
     public static BlockMachine machineCasing;
+
+    @SideOnly(Side.CLIENT)
+    public static void initModels(){
+        machineCasing.initModel();
+    }
 }

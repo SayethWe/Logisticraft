@@ -8,10 +8,16 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemHardeningCapsule extends Item {
+public class ItemHardeningCapsule extends ModItem {
     public ItemHardeningCapsule() {
-        setRegistryName("hardening_capsule");
-        setUnlocalizedName(Logisticraft.MODID+".hardening_capsule");
+        super("hardening_capsule");
         setHasSubtypes(true);
+    }
+
+    @Override
+    public void initModel() {
+        ModelLoader.setCustomModelResourceLocation(this,0,new ModelResourceLocation(getRegistryName(), "raw"));
+        ModelLoader.setCustomModelResourceLocation(this,1,new ModelResourceLocation(getRegistryName()+"_medium","medium"));
+        ModelLoader.setCustomModelResourceLocation(this,2,new ModelResourceLocation(getRegistryName()+"_dark","dark"));
     }
 }

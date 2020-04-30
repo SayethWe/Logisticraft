@@ -1,8 +1,10 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "model": "logisticraft:machine_casing"
+  },
   "variants": {
-    "normal": {
-      "model": "logisticraft:wip",
-      "uvlock": true
-    }
+    "normal": [{}],
+    "inventory": [{}]
   }
 }

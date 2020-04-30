@@ -15,6 +15,6 @@ public class ItemCarbonPaste extends ModItem {
 
     @Override
     public void initModel() {
-
+        ModelLoader.setCustomModelResourceLocation(this,0,new ModelResourceLocation(getRegistryName(),"inventory"));
     }
 }

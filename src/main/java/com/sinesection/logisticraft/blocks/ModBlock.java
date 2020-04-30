@@ -11,10 +11,12 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ModBlock extends Block {
+public abstract class ModBlock extends Block {
 
     public ModBlock(Material materialIn) {
         super(materialIn);
     }
 
+    @SideOnly(Side.CLIENT)
+    public abstract void initModel();
 }

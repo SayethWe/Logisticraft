@@ -1,0 +1,14 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "logisticraft:steel_block_full"
+  },
+  "variants": {
+    "full": [{
+      "model": "logisticraft:steel_block_full"
+    }],
+    "case": [{
+      "model": "logisticraft:steel_block_case"
+    }]
+  }
+}

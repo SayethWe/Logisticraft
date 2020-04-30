@@ -13,13 +13,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockMachine extends ModBlock {
 
     public BlockMachine() {
-        super(Material.IRON);
-        setRegistryName("machine_casing");
-        setUnlocalizedName(Logisticraft.MODID+".machine_casing");
+        super(Material.IRON,"machine_casing");
     }
 
     @Override
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this),0,new ModelResourceLocation(getRegistryName(), "inventory"));
+
     }
 }

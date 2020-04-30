@@ -13,8 +13,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public abstract class ModBlock extends Block {
 
-    public ModBlock(Material materialIn) {
+    public ModBlock(Material materialIn, String name) {
         super(materialIn);
+
+        setRegistryName(name);
+        setUnlocalizedName(Logisticraft.MODID+"."+name);
     }
 
     @SideOnly(Side.CLIENT)

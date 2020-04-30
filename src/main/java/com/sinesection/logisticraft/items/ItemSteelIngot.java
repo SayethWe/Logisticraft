@@ -9,7 +9,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSteelIngot extends ModItem
 {
-    private enum EnumSteelType{
+    public enum EnumSteelType{
         CASE(0,"case"),
         FULL(1,"full");
 
@@ -22,7 +22,7 @@ public class ItemSteelIngot extends ModItem
         }
         public int getValue() {return value;}
         public String getVariant() {return variant;}
-        static String getVariantByValue(int value) {
+        public static String getVariantByValue(int value) {
             for (EnumSteelType t:EnumSteelType.values()) {
                 if (t.getValue()==value) return t.getVariant();
             }

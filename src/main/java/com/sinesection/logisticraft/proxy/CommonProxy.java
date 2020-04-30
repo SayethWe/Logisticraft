@@ -36,13 +36,12 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        event.getRegistry().register(new BlockMachine());
+        ModBlocks.registerAll(event);
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         ModItems.registerAll(event);
-
-        event.getRegistry().register(new ItemBlock(ModBlocks.machineCasing).setRegistryName(ModBlocks.machineCasing.getRegistryName()));
+        ModBlocks.registerAllItems(event);
     }
 }

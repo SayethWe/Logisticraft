@@ -1,7 +1,7 @@
 {
   "type" : "minecraft:crafting_shapeless",
   "result": {
-    "item": "logisticraft:steel_ingot",
+    "item": "logisticraft:ch_steel_ingot",
     "count": 1,
     "data": 0
   },

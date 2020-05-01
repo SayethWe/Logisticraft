@@ -18,6 +18,7 @@
     }
   },
   "result": {
-    "item": "logisticraft:hardening_capsule"
+    "item": "logisticraft:hardening_capsule",
+    "data": 0
   }
 }

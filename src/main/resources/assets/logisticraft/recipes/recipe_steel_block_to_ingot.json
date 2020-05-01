@@ -1,0 +1,14 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "result": {
+    "item": "logisticraft:steel_ingot",
+    "count": 9,
+    "data": 0
+  },
+  "ingredients": [
+    {
+      "item": "logisticraft:steel_block",
+      "data": 0
+    }
+  ]
+}

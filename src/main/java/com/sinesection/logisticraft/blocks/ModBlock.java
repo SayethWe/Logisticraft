@@ -22,4 +22,5 @@ public abstract class ModBlock extends Block {
 
     @SideOnly(Side.CLIENT)
     public abstract void initModel();
+
 }

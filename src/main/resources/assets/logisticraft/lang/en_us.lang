@@ -1,4 +1,8 @@
 item.logisticraft.carbon_paste.name=Carbon Paste
 item.logisticraft.hardening_capsule.name=Hardening Capsule
-item.logisticraft.steel_ingot.name=Case-Hardened Steel
+item.logisticraft.ch_steel_ingot.name=Case-Hardened Steel Ingot
+item.logisticraft.steel_ingot.name=Steel Ingot
+
 tile.logisticraft.machine_casing.name=Machine Casing
+tile.logisticraft.ch_steel_block.name=Block of C.H. Steel
+tile.logisticraft.steel_block.name=Block of Steel

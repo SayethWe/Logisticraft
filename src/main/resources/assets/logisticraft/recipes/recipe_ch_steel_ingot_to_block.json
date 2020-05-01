@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item":"logisticraft:ch_steel_ingot",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "logisticraft:ch_steel_block",
+    "data": 0
+  }
+}

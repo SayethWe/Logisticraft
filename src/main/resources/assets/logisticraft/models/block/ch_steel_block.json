@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "particle": "logisticraft:block/ch_steel_block",
+    "all": "logisticraft:block/ch_steel_block"
+  }
+}

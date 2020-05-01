@@ -3,6 +3,7 @@ package com.sinesection.logisticraft.blocks;
 import com.sinesection.logisticraft.Logisticraft;
 import com.sinesection.logisticraft.tileEntities.TileEntityMachine;
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -26,30 +27,27 @@ import org.apache.logging.log4j.Level;
 import javax.annotation.Nullable;
 import java.awt.*;
 
-public class BlockMachine extends ModBlock {
+public class BlockMachine extends ModBlock implements ITileEntityProvider {
 
     public BlockMachine() {
         super(Material.IRON,"machine_casing");
-        this.hasTileEntity=true;
     }
 
     @Override
     public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this),0,
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0,
                 new ModelResourceLocation(getRegistryName(), "inventory"));
-    }
-
-    @Override
-    public TileEntity createTileEntity(World world, IBlockState state) {
-        return new TileEntityMachine();
     }
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if(!worldIn.isRemote) {
             TileEntityMachine tem = getTE(worldIn, pos);
-            if(tem==null) Logisticraft.logger.log(Level.DEBUG, "Null TE");
-            String out = tem.clicked();
+            if(tem==null) {
+                Logisticraft.logger.log(Level.DEBUG, "Null TE");
+                return false;
+            }
+            String out = tem.clicked(hitX, hitY, hitZ);
             TextComponentString t = new TextComponentString(out);
             t.getStyle().setColor(TextFormatting.DARK_AQUA);
             playerIn.sendStatusMessage(t, false);
@@ -59,5 +57,11 @@ public class BlockMachine extends ModBlock {
 
     private TileEntityMachine getTE(World world, BlockPos pos) {
         return (TileEntityMachine) world.getTileEntity(pos);
+    }
+
+    @Nullable
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new TileEntityMachine();
     }
 }

@@ -12,8 +12,9 @@ public class TileEntityMachine extends TileEntity {
         return "machine";
     }
 
-    public String clicked() {
-        return "Hi" + clicks;
+    public String clicked(float hitX, float hitY, float hitZ) {
+        clicks++;
+        return String.format("Clicked %d time(s) at: %.2f, %.2f, %.2f", clicks, hitX, hitY, hitZ);
     }
 
     @Override

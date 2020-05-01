@@ -7,6 +7,7 @@ import com.sinesection.logisticraft.items.ItemHardeningCapsule;
 import com.sinesection.logisticraft.items.ItemSteelIngot;
 import com.sinesection.logisticraft.items.ModItems;
 import com.sinesection.logisticraft.recipes.ModRecipes;
+import com.sinesection.logisticraft.tileEntities.ModTileEntities;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -37,6 +38,7 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         ModBlocks.registerAll(event);
+        ModTileEntities.registerAll();
     }
 
     @SubscribeEvent

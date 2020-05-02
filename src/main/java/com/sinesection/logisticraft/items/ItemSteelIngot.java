@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ItemSteelIngot extends ModItem {
     private final EnumSteelType type;
@@ -13,6 +14,7 @@ public class ItemSteelIngot extends ModItem {
         super((inType != EnumSteelType.FULL ? inType + "_" : "")+ "steel_ingot");
         setHasSubtypes(true);
         type = inType;
+        //if(inType==EnumSteelType.FULL) OreDictionary.registerOre("ingotSteel",this);
     }
 
     @SideOnly(Side.CLIENT)

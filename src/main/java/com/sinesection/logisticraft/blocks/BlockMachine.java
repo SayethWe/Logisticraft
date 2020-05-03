@@ -3,6 +3,7 @@ package com.sinesection.logisticraft.blocks;
 import com.sinesection.logisticraft.Logisticraft;
 import com.sinesection.logisticraft.tileEntities.TileEntityMachine;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -29,6 +30,8 @@ import java.awt.*;
 
 public class BlockMachine extends ModBlock implements ITileEntityProvider {
 
+    private static final int GUI_ID=1;
+
     public BlockMachine() {
         super(Material.IRON,"machine_casing");
     }
@@ -42,16 +45,15 @@ public class BlockMachine extends ModBlock implements ITileEntityProvider {
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if(!worldIn.isRemote) {
-            TileEntityMachine tem = getTE(worldIn, pos);
-            if(tem==null) {
-                Logisticraft.logger.log(Level.DEBUG, "Null TE");
-                return false;
-            }
-            String out = tem.clicked(hitX, hitY, hitZ);
-            TextComponentString t = new TextComponentString(out);
-            t.getStyle().setColor(TextFormatting.DARK_AQUA);
-            playerIn.sendStatusMessage(t, false);
+            return true;
         }
+        try {
+            TileEntityMachine tileEnt = getTE(worldIn, pos);
+        } catch (ClassCastException e) {
+            Logisticraft.logger.log(Level.ERROR, "No Tile Entity Exists");
+            return false;
+        }
+        playerIn.openGui(Logisticraft.instance,GUI_ID, worldIn, pos.getX(),pos.getY(),pos.getZ());
         return true;
     }
 

@@ -2,6 +2,7 @@ package com.sinesection.logisticraft.proxy;
 
 import com.sinesection.logisticraft.blocks.BlockMachine;
 import com.sinesection.logisticraft.blocks.ModBlocks;
+import com.sinesection.logisticraft.gui.ModInterfaces;
 import com.sinesection.logisticraft.items.ItemCarbonPaste;
 import com.sinesection.logisticraft.items.ItemHardeningCapsule;
 import com.sinesection.logisticraft.items.ItemSteelIngot;
@@ -29,6 +30,7 @@ public class CommonProxy {
 
     public void init(FMLInitializationEvent e) {
         ModRecipes.init();
+        ModInterfaces.registerAll();
     }
 
     public void postInit(FMLPostInitializationEvent e) {

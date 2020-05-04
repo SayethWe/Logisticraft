@@ -7,8 +7,10 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.util.ResourceLocation;
 
 public class InterfaceMachine extends GuiContainer {
-    private static final int WIDTH=230;
-    private static final int HEIGHT=219;
+    private static final int WIDTH=176;
+    private static final int HEIGHT=166;
+
+
 
     private static final ResourceLocation BACKGROUND = new ResourceLocation(Logisticraft.MODID, "textures/gui/interface_machine.png");
 

@@ -22,25 +22,25 @@ public class ContainerMachine extends Container {
 
     private void addOwnSlots() {
         IItemHandler itemHandler = this.tileEnt.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
-        addSlotToContainer(new SlotItemHandler(itemHandler, 0, 58, 48));
-        addSlotToContainer(new SlotItemHandler(itemHandler, 1, 121, 24));
-        addSlotToContainer(new SlotItemHandler(itemHandler, 2, 98, 71));
-        addSlotToContainer(new SlotItemHandler(itemHandler, 3, 153, 48));
+        addSlotToContainer(new SlotItemHandler(itemHandler, 0, 35, 35)); //input
+        addSlotToContainer(new SlotItemHandler(itemHandler, 1, 74, 21));//top machien part
+        addSlotToContainer(new SlotItemHandler(itemHandler, 2, 74, 48));//bottom machine part
+        addSlotToContainer(new SlotItemHandler(itemHandler, 3, 116, 35));//output
     }
     private void addPlayerSlots(IInventory playerInventory) {
         // Slots for the main inventory
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 9; col++) {
-                int x = 10 + col * 18;
-                int y = row * 18 + 113;
+                int x = 8 + col * 18;
+                int y = row * 18 + 84;
                 this.addSlotToContainer(new Slot(playerInventory, col + row * 9 + 10, x, y));
             }
         }
 
         // Slots for the hotbar
         for (int col = 0; col < 9; col++) {
-            int x = 10 + col * 18;
-            int y = 188;
+            int x = 8 + col * 18;
+            int y = 142;
             this.addSlotToContainer(new Slot(playerInventory, col, x, y));
         }
     }
